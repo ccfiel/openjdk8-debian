@@ -21,6 +21,6 @@ RUN export PATH=$PATH:$PWD/android-sdk-linux/platform-tools/
 RUN ["/bin/bash", "-c", "set +o pipefail"]
 RUN yes | android-sdk-linux/tools/bin/sdkmanager --licenses
 RUN ["/bin/bash", "-c", "set -o pipefail"]
-RUN wget --output-document=flutter-sdk.tar.xz $FLUTTER_VERSION
-RUN tar -xf flutter-sdk.tar.xz
-RUN export PATH=$PATH:$PWD/flutter/bin
+RUN pip install firebase-admin
+RUN pip install google-cloud-storage
+RUN pip install google-cloud-firestore
