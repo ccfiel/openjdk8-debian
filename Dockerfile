@@ -8,7 +8,7 @@ ARG FLUTTER_VERSION="https://storage.googleapis.com/flutter_infra/releases/stabl
 
 RUN apt-get --quiet update --yes
 RUN apt-get --quiet upgrade --yes
-RUN apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1 bash python python-pip ruby-full ruby-dev
+RUN apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1 bash python python-pip ruby-full ruby-dev git-all
 RUN gem install fastlane -NV
 RUN gem install google-api-client
 RUN wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS}.zip
